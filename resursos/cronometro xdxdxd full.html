@@ -1,0 +1,33 @@
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+		<script type="text/javascript">
+		var milisegundos = 60000;
+		function reloj() {
+			if(milisegundos>-1000){
+				var fecha=new Date(milisegundos);
+				var m=fecha.getMinutes();
+				var s=fecha.getSeconds();
+				m = actualizarHora(m);
+				s = actualizarHora(s);
+				document.getElementById('displayReloj').innerHTML = m+":"+s;
+				milisegundos = milisegundos - 1000;
+				var t = setTimeout(function(){reloj()},1000);
+			}else{
+				alert('Tu tiempo ha terminado');
+			}
+		}
+		function actualizarHora(i) {
+			if (i<10) {i = "0" + i};  // Añadir el cero en números menores de 10
+			return i;
+		}
+		</script>
+	</head>
+	<body onload="reloj()" >
+		<div style="text-align:center;">
+			<div id="cabecera"><h2>Cursos aprenderaprogramar.com</h2><h3>Cuenta atrás</h3></div>
+			<div style="color:blue; font-family: verdana, arial; font-size:30px; padding:15px;" id ="displayReloj" >   </div>
+		</div>
+	</body>
+</html>

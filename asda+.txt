@@ -1,0 +1,16 @@
+Si lo que queres es que aparezca una ventana emergente cuando termina el juego, tenes que agregar un alert en la funcion mostrarCartelGanador. De la siguiente forma:
+
+
+function mostrarCartelGanador() {
+    alert("Ganaste!");
+}
+
+Pero si lo que queres es que se "cree" un boton en tu html (pero no en un cartel sino en la misma pagina). Es un poco mas complicado. Seria algo asi.
+
+function mostrarCartelGanador() {
+    var elDiv = document.getElementById("nombre_de_id_del_div_donde_lo_quieras_poner");
+    var boton = document.createElement("BUTTON");
+    var texto = document.createTextNode("Hace click aca!");    
+    boton.appendChild(text);
+    elDiv.appendChild(boton);
+}

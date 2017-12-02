@@ -1,0 +1,53 @@
+@font-face{
+   font-family: "FrizQuadrata";
+   font-style: normal;
+   font-weight: normal;
+   src: url(FrizQuadrataTT.ttf);
+}
+@font-face{
+   font-family: "Gameplay";
+   font-style: normal;
+   font-weight: normal;
+   src: url(Gameplay.ttf);
+}
+
+.game{
+    font-family: "Gameplay";
+}
+.pieza{
+    width: 145px;
+    height: 145px;
+    float: left;
+    border: 2px solid rgba(55,0,55,0.405);
+    box-sizing: border-box;
+}
+#juego{
+    width: 450px;
+    height: 450px;
+}
+.letra{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.boton{
+  padding-left: 0;
+  list-style: none;
+}
+H1{
+    font-family: "Gameplay";
+}
+H2{
+   font-family: "FrizQuadrata";
+
+}
+.cartel{
+        font-size: 25%;
+        text-align:center;
+        float: center;
+
+}
+.cajacartel{
+    width: 100%;
+
+
+}
